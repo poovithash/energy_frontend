@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Energy Demand Prediction</h1>
+            <p>Predict the future total energy Demand based on country and year.</p>
+        </header>
+
+        <!-- Form for selecting country and year -->
+        <section class="prediction-form">
+            <label for="country">Select Country:</label>
+            <select id="country" name="country">
+                <option value="India">India</option>
+                <option value="United States">United States</option>
+                <option value="China">China</option>
+                <option value="Germany">Germany</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Russia">Russia</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="France">France</option>
+                <option value="Japan">Japan</option>
+                <option value="South Korea">South Korea</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Italy">Italy</option>
+                <option value="Spain">Spain</option>
+                <!-- Add more countries if needed -->
+            </select>
+
+            <label for="year">Enter Year:</label>
+            <input type="text" id="year" name="year" placeholder="Enter year to predict" required>
+            <br>
+            <button onclick="makePrediction()">Get Prediction</button>
+
+            <div id="predictionResult">
+                <!-- Prediction result will be displayed here -->
+            </div>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

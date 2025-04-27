@@ -7,7 +7,7 @@ function makePrediction() {
         return;
     }
 
-    fetch('https://energy-model-api-3.onrender.com/predict', {  // <-- FIXED
+    fetch('https://energy-model-api-4.onrender.com/predict', {  // <-- FIXED
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

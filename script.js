@@ -6,7 +6,7 @@ function makePrediction() {
         document.getElementById("predictionResult").innerText = "Please enter a valid year.";
         return;
     }
-
+    document.getElementById("predictionResult").innerText = "Requesting model to predict results....";
     fetch('https://energy-demand-api-p3n4.onrender.com/predict', {  
         method: 'POST',
         headers: {
